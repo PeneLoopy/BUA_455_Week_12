@@ -4,7 +4,7 @@
     <title>Week 12</title>
     <meta charset="utf-8" />
     <meta name="author" content="Penelope Pooler Eisenbies" />
-    <meta name="date" content="2023-04-13" />
+    <meta name="date" content="2023-11-14" />
     <script src="docs_files/header-attrs/header-attrs.js"></script>
     <link href="docs_files/panelset/panelset.css" rel="stylesheet" />
     <script src="docs_files/panelset/panelset.js"></script>
@@ -51,50 +51,44 @@ class: bottom, right
   
   #### Penelope Pooler Eisenbies
   
-  #### 2023-04-13
+  #### 2023-11-14
   
   [Wikipedia Sloth Page](https://en.wikipedia.org/wiki/Sloth)
   
 ---
 
-### Updates
+### Housekeeping
 
-- HW 2 - Part 5 is due Wednesday, 4/19.
+- Final Proposals and Group Projects
 
-  - For Question 9, you should document steps to update Panel 6.
+  - Your participation in the final proposal and plan  will affect your final grade on the project.
   
-  - Data for this panel are posted on Blackboard for HW 5 - Part 2
+  - Group members that don't contribute will not get credit for the work done by others in the group.
   
-    - [Netflix Quarterly Revenue (requires SU Blackboard login)](https://blackboard.syracuse.edu/bbcswebdav/pid-8620807-dt-content-rid-106236144_1/xid-106236144_1)
-    - [Netflix Quarterly Net Income (requires SU Blackboard login)](https://blackboard.syracuse.edu/bbcswebdav/pid-8620807-dt-content-rid-106236145_1/xid-106236145_1)
-
-  - There is a 2 day grace period, if needed.
-  
----
-
-### More Updates
-
-- Quiz 2 grading is progressing (I hope to be done this weekend).
-
-- Projects should be progressing as well.
-  
-  - If you have data management or project management questions, get in touch with me or course TAs ASAP.
-  
-  - Plan out tasks and how to accomplish them.  
+  - If you have data management questions, reach out to myself or a course TA.
   
   - We are here to help with tasks where you might be stymied, but don't wait until the last day.
   
-- Presentations will be on 4/25 and 4/27
+- Presentations will be on 12/12.
 
   - All students are required to attend and provide feedback.
+  
+- HW 5 - Part 2 will be posted over break but you can start it after break.
 
+  - It will be due on 12/6
+
+  - There is a 2 day grace period, if needed.
+
+- Quiz 2 grading will be done over break because there are still a couple make-ups.
+
+  
 ---
 
 ### Plans for today
 
-One day off from standard schedule so today's notes represent two lectures.
+- Two lectures on Geographic Data have been streamlined so that students also have time for group work this week.
 
-- Notes are streamlined and I will not cover them all in detail
+- I will not cover them all in detail
   
 - Rather than deleting notes and code that might be useful to some students all notes are provided.
   
@@ -108,13 +102,7 @@ One day off from standard schedule so today's notes represent two lectures.
 
     - Note: **[Rpubs](https://rpubs.com/)** is the best option for presenting and submitting your dashboard
     
-#### Engagement Questions about Plot and Panel Borders
-
-  - There were a few questions about formatting so I added formatting details to plots
-  
-  - There many options for formatting depending on data and visualization goal
-  
-  - Also see: [Final Side-by-Side Boxplots and Code from Week 2 (Slide 13)](https://peneloopy.github.io/BUA_455_Week_2/?panelset1=r-code---final-plot&amp;panelset=complete-data-management&amp;panelset2=hw-2-purpose&amp;panelset3=hw-2---part-1---notes&amp;panelset4=hw-2---part-2---notes&amp;panelset5=hw-2---part-3---notes&amp;panelset6=hw-2---part-4---notes&amp;panelset7=hw-2---part-5---notes#13)
+- After break there will be more time to work in calss as well
     
 ---
 
@@ -144,9 +132,9 @@ head(world_bxo_data, 3)
 ## # A tibble: 3 × 7
 ##   region wknd_gross  long   lat group order continent
 ##   &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;    
-## 1 Mexico   21797271 -91.7  18.7   970 60731 Americas 
-## 2 Mexico   21797271 -91.8  18.7   970 60732 Americas 
-## 3 Mexico   21797271 -91.8  18.7   970 60733 Americas
+## 1 China    11661657  111.  20.0   418 28698 Asia     
+## 2 China    11661657  111.  19.9   418 28699 Asia     
+## 3 China    11661657  111.  19.9   418 28700 Asia
 ```
   
 ---
@@ -207,7 +195,7 @@ asia_bxo_map &lt;- asia_bxo_data |&gt;    # Creates the map that follows
    coord_map("albers", lat0 = 39, lat1 = 45) +
    labs(fill= "Gross ($1K)",
         title="Weekend Gross ($ Thousands) in Asian Countries",
-        subtitle="Weekend Ending 4/9/2023 - Data are Log-transformed",
+        subtitle="Weekend Ending 11/12/2023 - Data are Log-transformed",
         caption="Data Source: https://www.boxofficemojo.com") +
     
    scale_fill_continuous(type = "viridis",  trans="log",
@@ -626,7 +614,7 @@ ne_edu_pct &lt;- edu_NE_map |&gt;
   
 - Some of this should be review
 
-- Next week, we will talk about managing a long term consulting project
+- After break, we will talk about managing a long term consulting project
 
   - Managing files over time
   
@@ -705,14 +693,12 @@ ne_edu_pct &lt;- edu_NE_map |&gt;
     
 ---
 
-### Lecture 20 In-class Exercise 
+### Lecture 24 In-class Exercise 
   
 **`1.`** Open your HW 5 - Part 1.Rmd file and knit it to create your dashboard. 
 
 - Make sure this file has your name in the header.
 
-- It is okay if you haven't revised it yet for HW 5 - Part 2 
-   
 - If you don't have HW 5 - Part 1 done, you can use your html file from another HW Assignment, e.g. HW 4.
    
 **`2.`** Click the Rpubs icon, create a free account, and publish your html file.
@@ -721,11 +707,11 @@ ne_edu_pct &lt;- edu_NE_map |&gt;
 
 **`3.`** Submit the link to your published file on Blackboard.
 
-**`4.`** A Link to your published file must be submitted by Friday 4/14/22 at midnight to count for class participation today's lecture.
+**`4.`** A Link to your published file must be submitted by Friday 11/17/23 at midnight to count for class participation today's lecture.
 
 ---
 
-### Next Week
+### After Break
 
 #### Additional Topics
 
@@ -749,11 +735,11 @@ ne_edu_pct &lt;- edu_NE_map |&gt;
   
 ---
 
-### More about Next Week:
+### More about After Break
 
 #### Review of Skillset Terminology
 
-Now that you are (almost) done with BUA 455 and more so, when you graduate you have a very useful set of skills
+Now that you are (almost) done with BUA 455, and more so when you graduate, you have a very useful set of skills
 
 - Explaining these skills to others is a challenge
 
@@ -777,10 +763,6 @@ background-size: cover
   
 .bg-azure.b--dark_cyan.ba.bw2.br3.shadow-5.ph2[
 
-- **HW 5 - Part 2**
-
-  - Due Wed. 4/19
-    
 - **More with Geographic Data**
 
    - Adding Shadow Text
